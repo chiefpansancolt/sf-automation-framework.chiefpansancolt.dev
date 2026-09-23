@@ -2,59 +2,47 @@
 title: How to contribute
 nextjs:
   metadata:
-    title: YOUR_APP_NAME - How to contribute
+    title: Salesforce Automation Framework - How to contribute
     description: See what ways you can contribute to the project.
 ---
 
-First and foremost, thank you for taking the time to contribute to
-YOUR_APP_NAME — any help is appreciated to make YOUR_APP_NAME better and
-stronger!
+Bug reports, feature requests, and pull requests are welcome on GitHub at
+[chiefpansancolt/salesforce-automation-framework](https://github.com/chiefpansancolt/salesforce-automation-framework).
+This project is intended to be a safe, welcoming space for collaboration,
+and contributors are expected to adhere to the
+[Contributor Covenant](https://github.com/chiefpansancolt/salesforce-automation-framework/blob/main/.github/CODE_OF_CONDUCT.md)
+code of conduct.
 
 ---
 
-## Code of Conduct
+## Reporting bugs
 
-This project and everyone participating in it is governed by the [YOUR_APP_NAME
-Code of Conduct](https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO/blob/main/.github/CODE_OF_CONDUCT.md).
-By participating, you are expected to uphold this code. Please report
-unacceptable behavior to CHANGE_ME@example.com.
-
-## How can I contribute
-
-### Reporting bugs
-
-#### Before submitting a bug report
-
-This section guides you through submitting a bug report for YOUR_APP_NAME.
-Following these guidelines helps maintainers and the community understand your
-report 📝, reproduce the behavior 💻, and find related reports 🔎.
-
-Before creating bug reports, please check [this list](https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO/issues?q=is%3Aopen+is%3Aissue+label%3Abug)
-as you might find out that you don't need to create one. When you are creating
-a bug report, please include as many details as possible.
-
-> Note: If you find a closed issue that seems like it is the same thing you're experiencing, open a new issue and include a link to the original issue in the body of your new one.
+Before creating a bug report, check the
+[open issues](https://github.com/chiefpansancolt/salesforce-automation-framework/issues?q=is%3Aopen+is%3Aissue+label%3Abug)
+in case it's already tracked. When filing one, include as much detail as
+possible: org edition, API version, and a minimal reproduction if the bug
+involves the trigger framework.
 
 ## Suggesting enhancements
 
-This section guides you through submitting an enhancement suggestion for
-YOUR_APP_NAME, including completely new features and minor improvements to
-existing functionality.
+Check the [open enhancement requests](https://github.com/chiefpansancolt/salesforce-automation-framework/issues?q=is%3Aopen+is%3Aissue+label%3Aenhancement)
+before opening a new one.
 
-Before creating enhancement suggestions, please check [this list](https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO/issues?q=is%3Aopen+is%3Aissue+label%3Aenhancement)
-as you might find out that you don't need to create one.
+## Development
 
-## Code contributions
-
-Looking to contribute to YOUR_APP_NAME? You can look for any tickets tagged with `help-wanted`.
-
-- [Help wanted issues](https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22) - issues which could use help from the community to complete
+Development happens in your own Salesforce org. Developing directly against
+the framework means no methods can be renamed or removed without a breaking
+change. Treat the public surface of `TriggerPipeline`, `ATriggerHandler`,
+`DMLUtility`, and `ErrorLogger` as a contract.
 
 ## Pull requests
 
-Please follow these steps to have your contribution considered by the maintainers:
+1. Fork the repo and create a new branch.
+2. Make your changes and commit them.
+3. Open a pull request following the
+   [pull request template](https://github.com/chiefpansancolt/salesforce-automation-framework/blob/main/.github/PULL_REQUEST_TEMPLATE.md).
+4. Verify all status checks pass and merge conflicts are resolved.
 
-- Follow all instructions in [the template](https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO/blob/main/.github/PULL_REQUEST_TEMPLATE.md)
-- After you submit your pull request, verify that all status checks are passing
-
-While the prerequisites above must be satisfied prior to having your pull request reviewed, the reviewer(s) may ask you to complete additional design work, tests, or other changes before your pull request can be ultimately accepted.
+See the full
+[contributing guide](https://github.com/chiefpansancolt/salesforce-automation-framework/blob/main/.github/CONTRIBUTING.md)
+for more detail.

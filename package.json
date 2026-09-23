@@ -1,14 +1,14 @@
 {
-  "name": "documentation-template",
+  "name": "sf-automation-framework-docs",
   "version": "0.1.0",
   "private": true,
-  "description": "A Next.js + Markdoc template for building documentation sites",
+  "description": "Documentation site for the Salesforce Automation Framework",
   "author": "chiefpansancolt",
   "repository": {
     "type": "git",
-    "url": "https://github.com/chiefpansancolt/documentation-template"
+    "url": "https://github.com/chiefpansancolt/sf-automation-framework.chiefpansancolt.dev"
   },
-  "homepage": "https://YOUR_APP_NAME.example.com",
+  "homepage": "https://sf-automation-framework.chiefpansancolt.dev",
   "scripts": {
     "dev": "next dev --webpack",
     "build": "next build --webpack",

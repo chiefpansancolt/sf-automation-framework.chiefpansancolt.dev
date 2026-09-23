@@ -2,37 +2,45 @@
 title: Getting Started
 nextjs:
   metadata:
-    title: YOUR_APP_NAME - Getting Started
-    description: Getting started with using YOUR_APP_NAME.
+    title: Salesforce Automation Framework - Getting Started
+    description: Getting started with the Salesforce Automation Framework.
 ---
 
-<!-- CHANGE_ME: rewrite this whole page for your project. The structure
-     below (quick-links, a Quick start section, Resources, Getting help)
-     is a starting scaffold, not fixed content. -->
-
-Learn how to get YOUR_APP_NAME set up.
+The Salesforce Automation Framework is a trigger framework, error logger,
+and set of flow templates for building automation on the Salesforce
+platform. It is not a managed or unlocked package. It deploys straight from
+source using the sf CLI, so every class ships in your org's namespace and is
+free to extend.
 
 {% quick-links %}
 
-{% quick-link title="Installation" icon="installation" href="/docs/installation" description="Step-by-step guides to setting up your system and installing the library." /%}
+{% quick-link title="Installation" icon="installation" href="/docs/installation" description="Deploy the framework into an org with the sf CLI or a release zip." /%}
 
-{% quick-link title="Usage" icon="presets" href="/docs/usage" description="Understand how to use it in your project." /%}
+{% quick-link title="Trigger Framework" icon="presets" href="/docs/trigger-framework" description="Custom-metadata-driven trigger pipelines and handlers." /%}
 
-{% quick-link title="Contributing" icon="plugins" href="/docs/how-to-contribute" description="Learn how to contribute to the project." /%}
+{% quick-link title="Error Logger" icon="plugins" href="/docs/error-logger" description="Log exceptions to a queryable Error_Log__c record." /%}
 
-{% quick-link title="Roadmap" icon="theming" href="https://github.com/users/YOUR_GITHUB_USERNAME/projects/1" description="See what is planned or being worked on." /%}
+{% quick-link title="Flow Templates" icon="theming" href="/docs/flow-templates" description="Before/after-save and before-delete record-triggered flow starting points." /%}
 
 {% /quick-links %}
 
 ---
 
-## Quick start
+## What's included
 
-YOUR_APP_NAME is a CHANGE_ME_ONE_LINE_DESCRIPTION.
-
-### Features
-
-- CHANGE_ME: list your project's key features here
+- **Trigger Framework**: a `TriggerPipeline` entry point plus an
+  `ATriggerHandler` base class, driven by `Trigger_Pipeline__mdt` and
+  `Trigger_Handler__mdt` custom metadata so handlers can be added, removed,
+  or reordered without touching a trigger.
+- **Error Logger**: a single `ErrorLogger.logError()` call that writes an
+  `Error_Log__c` record, ready to page through in a list view or route with
+  a flow.
+- **Flow templates**: six Record-Triggered Flow templates covering
+  before-save, after-save, and before-delete, each with a with-bypass and
+  without-bypass variant.
+- **Bypass permissions**: `Exclude_Trigger` and `Exclude_Flow` custom
+  permissions, plus an `Exclude_User` permission set group, so integration
+  users can skip automation without special-casing them in code.
 
 ---
 
@@ -40,7 +48,8 @@ YOUR_APP_NAME is a CHANGE_ME_ONE_LINE_DESCRIPTION.
 
 ### License
 
-YOUR_APP_NAME is available as open source under the terms of the [MIT License](https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO/blob/main/LICENSE).
+The Salesforce Automation Framework is available as open source under the
+terms of the [MIT License](https://github.com/chiefpansancolt/salesforce-automation-framework/blob/main/LICENSE).
 
 ### Change Log
 
@@ -50,19 +59,13 @@ See the [change log](/docs/change-log) for release history.
 
 ## Getting help
 
-There are many ways to get assistance via Issues, Discussions, and Pull Requests.
-
 ### Contributing
 
-Bug reports, feature requests, and pull requests are welcome on GitHub at [https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO](https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO). This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO/blob/main/.github/CODE_OF_CONDUCT.md) code of conduct.
-
-To see more about contributing check out this [document](https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO/blob/main/.github/CONTRIBUTING.md).
-
-- Fork the repo and create a new branch
-- Once everything is changed and committed, create a pull request
-
-**Ensure all merge conflicts are fixed and CI is passing.**
+Bug reports, feature requests, and pull requests are welcome on GitHub at
+[chiefpansancolt/salesforce-automation-framework](https://github.com/chiefpansancolt/salesforce-automation-framework).
+See [how to contribute](/docs/how-to-contribute) for details.
 
 ### Join the community
 
-Join the community by posting in our [discussions](https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO/discussions) on GitHub.
+Join the [Discord server](https://discord.gg/FPfA3w6) to ask questions or
+talk through a trigger pipeline design.

@@ -2,32 +2,40 @@
 title: Installation
 nextjs:
   metadata:
-    title: YOUR_APP_NAME - Installation
-    description: Steps for installing and setting up YOUR_APP_NAME.
+    title: Salesforce Automation Framework - Installation
+    description: Deploy the Salesforce Automation Framework into an org with the sf CLI or a release zip.
 ---
 
-<!-- CHANGE_ME: rewrite this page with your project's real install steps.
-     The table below demonstrates Markdoc's table support — keep or
-     remove as fits your content. -->
-
-Find out how to install YOUR_APP_NAME and get it set up for usage.
+The framework is not distributed as a managed or unlocked package. Deploy
+its source directly into your org, in your own namespace, so every class is
+yours to extend or override.
 
 ---
 
-## Setup
+## Requirements
 
-### Requirements
+| Requirement | Version                       |
+| ----------- | ----------------------------- |
+| sf CLI      | latest (`sf update` to check) |
+| API access  | Metadata API-enabled org      |
 
-| Requirement | Version   |
-| ----------- | --------- |
-| CHANGE_ME   | CHANGE_ME |
+## Deploy with the sf CLI
 
-### Install Steps
+Clone or download the repository, authenticate the sf CLI against your
+target org, then deploy the `src` directory:
 
-1. CHANGE_ME
-2. CHANGE_ME
-3. CHANGE_ME
+```bash
+sf project deploy start -d src
+```
 
-### Post Install Steps
+## Deploy with a release zip
 
-CHANGE_ME: document any configuration required after installation.
+If you don't have the sf CLI available, download the zip attached to the
+latest [release](https://github.com/chiefpansancolt/salesforce-automation-framework/releases)
+and deploy it through Workbench (**Migration → Deploy**).
+
+## Post-install steps
+
+Deploying the source does not grant access on its own. Before building your
+first trigger pipeline, work through [Configuration](/docs/configuration) to
+assign the permission sets that control who the framework runs for.

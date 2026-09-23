@@ -1,6 +1,6 @@
 {
-  "name": "YOUR_APP_NAME",
-  "short_name": "YOUR_APP",
+  "name": "Salesforce Automation Framework",
+  "short_name": "SF Automation",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
